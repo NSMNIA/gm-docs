@@ -1,0 +1,101 @@
+@import "core/breakpoints";
+@import "core/variables";
+@import "core/basics";
+
+main{
+    display: grid;
+    margin: auto;
+    grid-template-columns: 500px 1fr;
+
+    .pg__doc{
+        height: 100vh;
+        background-color: $gray;
+        position: sticky;
+        padding: 2rem;
+        top: 0;
+        left: 0;
+        user-select: none;
+
+        .pg__doc--title{
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1em;
+        }
+
+        .pg__doc--menu{
+            .pg__doc--menu-item{
+                font-size: 1.25rem;
+                margin-bottom: 1rem;
+                span{
+                    display: flex;
+                    align-items: center;
+                    svg{
+                        margin-left: .5rem;
+                    }
+                    &.active{
+                        svg{
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+                .pg__doc--menu-item--list{
+                    margin-top: .75rem;
+                    font-size: 1.1rem;
+
+                    .pg__doc--menu-item--list__item{
+
+                    }
+                }
+            }
+        }
+    }
+
+    .pg__content{
+        width: 90%;
+        max-width: 1280px;
+        margin: auto;
+
+        h1{
+            font-size: 60px;
+            line-height: 65px;
+            font-weight: 700;
+            margin: 80px 0 0;
+        }
+
+        p{
+            font-size: 1.063rem;
+            max-width: 42em;
+            margin-top: 1.875rem;
+            line-height: 1.7;
+            font-weight: 400;
+            color: $black;
+            
+            &:first-of-type{
+                font-size: 24px;
+                font-weight: 300;
+                color: lighten($black, 40%);
+            }
+        }
+        
+        hr{
+            height: 1px;
+            margin-bottom: -1px;
+            border: none;
+            border-bottom: 1px solid $gray;
+            margin-top: 40px;
+        }
+    }
+}
+
+a{
+    font-family: inherit;
+    color: $black;
+    border-bottom: 1px solid rgba($black,.2);
+    transition-property: border-bottom;
+    transition-timing-function: $transition;
+    transition-duration: .15s;
+
+    &:hover{
+        border-bottom: 1px solid rgba($primay-color,1);
+    }
+}

@@ -1,0 +1,45 @@
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background-color: $primay-color;
+  color: $white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  background-color: $white;
+  color: $black;
+  font-size: 16px;
+}
+
+img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    text-indent:-9999px;
+    user-select: none;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
