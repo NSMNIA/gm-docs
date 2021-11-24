@@ -5,16 +5,17 @@
 main{
     display: grid;
     margin: auto;
-    grid-template-columns: 500px 1fr;
+    grid-template-columns: 350px 1fr;
 
     .pg__doc{
         height: 100vh;
-        background-color: $gray;
+        background-color: rgba($primary-color, .2);
         position: sticky;
         padding: 2rem;
         top: 0;
         left: 0;
         user-select: none;
+        color: $black;
 
         .pg__doc--title{
             font-size: 2rem;
@@ -27,26 +28,63 @@ main{
                 font-size: 1.25rem;
                 margin-bottom: 1rem;
                 span{
+                    color: rgba($black, .8);
                     display: flex;
                     align-items: center;
+                    cursor: pointer;
+                    font-weight: 700;
+                    transition-property: color;
+                    transition-duration: .3s;
+                    transition-timing-function: $transition;
+                    &:hover, &:focus{
+                        color: $black;
+                    }
                     svg{
-                        margin-left: .5rem;
+                        width: 20px;
+                        margin-right: .5rem;
+                        transition-property: transform;
+                        transition-duration: .3s;
+                        transition-timing-function: $transition;
                     }
                     &.active{
+                        color: $black;
+                        + .pg__doc--menu-item--list {
+                            max-height: 200px;
+                            pointer-events: all;
+                        }
                         svg{
                             transform: rotate(180deg);
                         }
                     }
                 }
                 .pg__doc--menu-item--list{
+                    margin-left: calc(.5rem + 20px);
+                    max-height: 0;
+                    overflow: hidden;
+                    pointer-events: none;
                     margin-top: .75rem;
                     font-size: 1.1rem;
+                    transition-property: max-height;
+                    transition-duration: .3s;
+                    transition-timing-function: $transition;
 
                     .pg__doc--menu-item--list__item{
-                        color: $black;
+                        color: rgba($black, .8);
+                        margin: .5em 0;
+                        font-size: 1em;
 
                         .pg__doc--link{
                             color: inherit;
+                            transition-property: color;
+                            transition-duration: .3s;
+                            transition-timing-function: $transition;
+                            &.active{
+                                color: $black;
+                                border-bottom: 1px solid $black;
+                            }
+                            &:hover, &:focus{
+                                color: $black;
+                            }
                         }
                     }
                 }
