@@ -43,7 +43,11 @@ main{
                     font-size: 1.1rem;
 
                     .pg__doc--menu-item--list__item{
+                        color: $black;
 
+                        .pg__doc--link{
+                            color: inherit;
+                        }
                     }
                 }
             }
@@ -60,6 +64,13 @@ main{
             line-height: 65px;
             font-weight: 700;
             margin: 80px 0 0;
+        }
+
+        h2{
+            font-size: 35px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin: 30px 0 0;
         }
 
         p{
@@ -87,7 +98,7 @@ main{
     }
 }
 
-a{
+.pg__link{
     font-family: inherit;
     color: $black;
     border-bottom: 1px solid rgba($black,.2);
@@ -96,6 +107,6 @@ a{
     transition-duration: .15s;
 
     &:hover{
-        border-bottom: 1px solid rgba($primay-color,1);
+        border-bottom: 1px solid rgba($primary-color,1);
     }
 }

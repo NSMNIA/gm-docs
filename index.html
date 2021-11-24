@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.min.css">
+  <link rel="stylesheet" href="/assets/css/code.min.css">
+  <script src="/assets/js/highlight.min.js"></script>
 </head>
 
 <body>
@@ -26,7 +28,7 @@
           </span>
           <ul class="pg__doc--menu-item--list">
             <li class="pg__doc--menu-item--list__item">
-              <a href="/">
+              <a href="/" class="pg__doc--link">
                 Getting Started
               </a>
             </li>
@@ -47,15 +49,47 @@
     <div class="pg__content" style="height:300vh">
       <h1>Getting Started</h1>
       <p>Deze pagina is een overzicht van de Platform Generator documentatie.</p>
-      <p>Platform generator</p>
+      <p>De Platform Generator is een applicatie waarmee een dynamische website/webshop gerenegeerd kan worden. De platformen zijn opgesplitst in een front-end en back-end. De front-end is gemaakt in ReactJS en maakt gebruik van .JSX templates. De backend is een Headless CMS waarbij Strapi gebruikt wordt.</p>
       <hr>
+      <h2>Nieuw project aamaken</h2>
+      <p>
+        Om een nieuwe applicatie te maken ga je naar <a href="#" class="pg__link">URI naar Platform Generator</a>. Log met een account in. Het test account is:
+      </p>
+      <ul>
+        <li>Email: kevin@gravitymedia.nl</li>
+        <li>Password: admin</li>
+      </ul>
+      <p>
+        Op de platformen pagina zijn de eerder aangemaakte platformen te zien. Deze platformen zouden gekopieerd kunenn worden maar er kan ook een platform vanaf scratch worden gemaakt.
+      </p>
+      <ul>
+        <li>
+          <strong>
+            Platform generator
+          </strong>
+        </li>
+        <li>
+          Platform aanmaken
+        </li>
+        <li>
+          Accounts (beheren)
+        </li>
+      </ul>
+      <hr>
+      <pre>
+        <code class="hljs">
+function() {
+  return 'test';
+}
+        </code>
+      </pre>
       <p>
         Test
-        <a href='#'>Linkiee</a>
+        <a href='#' class="pg__link">Linkiee</a>
       </p>
     </div>
   </main>
-
+  <script>hljs.highlightAll();</script>
   <script src="/assets/js/main.ob.js"></script>
 </body>
 

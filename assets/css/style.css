@@ -110,6 +110,14 @@ main .pg__doc .pg__doc--menu .pg__doc--menu-item .pg__doc--menu-item--list {
   font-size: 1.1rem;
 }
 
+main .pg__doc .pg__doc--menu .pg__doc--menu-item .pg__doc--menu-item--list .pg__doc--menu-item--list__item {
+  color: #212121;
+}
+
+main .pg__doc .pg__doc--menu .pg__doc--menu-item .pg__doc--menu-item--list .pg__doc--menu-item--list__item .pg__doc--link {
+  color: inherit;
+}
+
 main .pg__content {
   width: 90%;
   max-width: 1280px;
@@ -121,6 +129,13 @@ main .pg__content h1 {
   line-height: 65px;
   font-weight: 700;
   margin: 80px 0 0;
+}
+
+main .pg__content h2 {
+  font-size: 35px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 30px 0 0;
 }
 
 main .pg__content p {
@@ -146,7 +161,7 @@ main .pg__content hr {
   margin-top: 40px;
 }
 
-a {
+.pg__link {
   font-family: inherit;
   color: #212121;
   border-bottom: 1px solid rgba(33, 33, 33, 0.2);
@@ -158,6 +173,6 @@ a {
           transition-duration: .15s;
 }
 
-a:hover {
+.pg__link:hover {
   border-bottom: 1px solid #1ad597;
 }
