@@ -28,8 +28,13 @@
           </span>
           <ul class="pg__doc--menu-item--list">
             <li class="pg__doc--menu-item--list__item">
-              <a href="/" class="pg__doc--link">
+              <a href="index.html" class="pg__doc--link">
                 Getting Started
+              </a>
+            </li>
+            <li class="pg__doc--menu-item--list__item">
+              <a href="/" class="pg__doc--link">
+                Accounts beheren
               </a>
             </li>
           </ul>
@@ -37,55 +42,97 @@
 
         <li class="pg__doc--menu-item">
           <span class="">
-            Structuur
+            Front-end
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </span>
-          
+          <ul class="pg__doc--menu-item--list">
+            <li class="pg__doc--menu-item--list__item">
+              <a href="/" class="pg__doc--link">
+                Opbouw
+              </a>
+            </li>
+            <li class="pg__doc--menu-item--list__item">
+              <a href="/" class="pg__doc--link">
+                Structuur
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="pg__doc--menu-item">
+          <span class="">
+            Back-end
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </span>
+          <ul class="pg__doc--menu-item--list">
+            <li class="pg__doc--menu-item--list__item">
+              <a href="/" class="pg__doc--link">
+                Over Strapi
+              </a>
+            </li>
+            <li class="pg__doc--menu-item--list__item">
+              <a href="/" class="pg__doc--link">
+                Kolommen toevoegen
+              </a>
+            </li>
+            <li class="pg__doc--menu-item--list__item">
+              <a href="/" class="pg__doc--link">
+                Tabellen toevoegen
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
-    <div class="pg__content" style="height:300vh">
+    <div class="pg__content">
       <h1>Getting Started</h1>
       <p>Deze pagina is een overzicht van de Platform Generator documentatie.</p>
-      <p>De Platform Generator is een applicatie waarmee een dynamische website/webshop gerenegeerd kan worden. De platformen zijn opgesplitst in een front-end en back-end. De front-end is gemaakt in ReactJS en maakt gebruik van .JSX templates. De backend is een Headless CMS waarbij Strapi gebruikt wordt.</p>
+      <p>De Platform Generator is een applicatie waarmee een dynamische website/webshop gegenereerd kan worden. De platformen zijn opgesplitst in een front-end en back-end. De front-end is gemaakt in ReactJS en maakt gebruik van <i>.JSX</i> templates. De backend is een Headless CMS waarbij Strapi gebruikt wordt.</p>
       <hr>
-      <h2>Nieuw project aamaken</h2>
+      <ul class="pg__toc">
+        <li>
+          <a href="#nieuw-platform-genereren" class="pg__link">Nieuw platorm genereren</a>
+        </li>
+      </ul>
+      <hr>
+      <h2 id="nieuw-platform-genereren">Nieuw platorm genereren</h2>
       <p>
-        Om een nieuwe applicatie te maken ga je naar <a href="#" class="pg__link">URI naar Platform Generator</a>. Log met een account in. Het test account is:
+        Om een nieuw platform te genereren ga je naar <a href="#" class="pg__link">URI naar Platform Generator</a>. Log met een account in. Het test account is:
       </p>
       <ul>
         <li>Email: kevin@gravitymedia.nl</li>
         <li>Password: admin</li>
       </ul>
       <p>
-        Op de platformen pagina zijn de eerder aangemaakte platformen te zien. Deze platformen zouden gekopieerd kunenn worden maar er kan ook een platform vanaf scratch worden gemaakt.
+        Ga naar de pagina <i>platforms</i> en klik op <i>Create platform</i>. Nu opent er een formulier op de pagina. Vul alle gegevens van het platform in en upload een logo en maskable icon.
       </p>
-      <ul>
-        <li>
-          <strong>
-            Platform generator
-          </strong>
-        </li>
-        <li>
-          Platform aanmaken
-        </li>
-        <li>
-          Accounts (beheren)
-        </li>
-      </ul>
-      <hr>
-      <pre>
-        <code class="hljs">
-function() {
-  return 'test';
-}
-        </code>
-      </pre>
       <p>
-        Test
-        <a href='#' class="pg__link">Linkiee</a>
+        <img src="assets/images/createplatform.webp" alt="Create Platform">
+      </p>
+      <p>Zodra alle gegevens zijn ingevuld kunnen de opties van het platform worden ingevuld. Hier worden opties gevraagd zoals: <i>Blog</i>, <i>Webshop</i> of <i>Bookingsysteem</i> en <i>Progressive Web App</i>.</p>
+      <p>
+        <img src="assets/images/createplatform-step2.webp" alt="Create Platform step 2">
+      </p>
+      <p>Als deze opties aan worden gezet kunnen er extra velden verschijnen. Deze variabelen kunnen altijd later ook nog worden aangepast.</p>
+      <p>
+        <img src="assets/images/createplatform-step2.1.webp" alt="Create Platform step 2.1">
+      </p>
+      <p>Zodra de volgende stap wordt aangeklikt wordt het platform gegenereerd met de ingevoerde variabelen. Als eerste wordt er een platform map aangemaakt met de gekozen naam. Daarna wordt de front-end van Git gecloned. Hierna wordt de maskable icon omgezet in verschillende favicons voor verschillende apparaten, deze stap duurt even. Daarna wordt het logo toegevoegd aan de front-end. Door middel van het logo en de favicons kan er een manifest worden gemaakt. Voor dit manifest is ook een browserconfig nodig. Hierna wordt het <i>.env</i> bestand aangemaakt met de ingevoerde keuzes. En als laatste van de front-end wordt de <i>package.json</i> geïnstalleerd. Bij de backend wordt alleen de Git repo gecloned en de <i>package.json</i> geïnstalleerd. Zodra dit allemaal gebeurd is kan het development team aan de slag met <a href="structuur.html" class="pg__link">coderen</a>.</p>
+      <blockquote>
+        <p>Tip</p>
+        <p>Mocht het zijn dat de installatie mislukt dan komt er een error in beeld. Hierin staat wat er verkeerd is en hoe het opgelost moet worden. <cite>Bijvoorbeeld dat de afbeeldingen niet aan de eisen voldoen of dat de naam van het platform al bestaat.</cite></p>
+      </blockquote>
+      <p>
+        Het gegenereerde platform staat nu in de map <i>`/platforms/`</i> met de ingevoerde naam.
+      </p>
+      <hr>
+      <p>
+        Ga nu naar (andere pagina)
       </p>
     </div>
   </main>
