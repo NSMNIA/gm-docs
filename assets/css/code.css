@@ -1,12 +1,19 @@
-pre code.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 1em;
+pre {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
   border-radius: .5rem;
+  -webkit-user-select: all;
+     -moz-user-select: all;
+      -ms-user-select: all;
+          user-select: all;
 }
 
 pre code.hljs {
