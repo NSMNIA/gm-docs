@@ -42,7 +42,7 @@ main{
                     svg{
                         width: 20px;
                         margin-right: .5rem;
-                        transition-property: transform;
+                        transition-property: transform color;
                         transition-duration: .3s;
                         transition-timing-function: $transition;
                         color: rgba($primary-color,.5);
@@ -54,7 +54,7 @@ main{
                             pointer-events: all;
                         }
                         svg{
-                            transform: rotate(180deg);
+                            transform: rotate(-90deg);
                             color: rgba($primary-color,1);
                         }
                     }
