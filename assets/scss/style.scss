@@ -9,7 +9,7 @@ main{
 
     .pg__doc{
         height: 100vh;
-        background-color: rgba($primary-color, .2);
+        background-color: $gray;
         position: sticky;
         padding: 2rem;
         top: 0;
@@ -45,6 +45,7 @@ main{
                         transition-property: transform;
                         transition-duration: .3s;
                         transition-timing-function: $transition;
+                        color: rgba($primary-color,.5);
                     }
                     &.active{
                         color: $black;
@@ -54,6 +55,7 @@ main{
                         }
                         svg{
                             transform: rotate(180deg);
+                            color: rgba($primary-color,1);
                         }
                     }
                 }
