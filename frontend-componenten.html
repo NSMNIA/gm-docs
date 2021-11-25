@@ -116,7 +116,7 @@
             <p>Deze pagina is een overzicht van de componenten van de front-end.</p>
             <hr>
             <ul class="pg__toc">
-                <li><a href="#functionele-componeten" class="pg__link">Functionele componenten</a></li>
+                <li><a href="#functionele-componenten" class="pg__link">Functionele componenten</a></li>
                 <li><a href="#systeem-variabele-componenten" class="pg__link">Systeem variabele componenten</a></li>
             </ul>
             <hr>
@@ -136,8 +136,10 @@
             <pre><xmp>import { Image } from '../../functions/Image';
 ...
 <Image src={URL} alt={ALT} fit="cover" /></xmp></pre>
-            <h4>Resultaat</h4>
-
+            <h4>Resultaat:</h4>
+            <p>
+                <img src="assets/images/Image.gif" alt="Component Image">
+            </p>
             <hr>
             <h3>Pagination</h3>
             <p>
@@ -158,6 +160,10 @@ const TotalItems = 8;
 
 // Pagination oproepen
 <Pagination itemsPerPage={TotalItems} totalItems={items.length} items={items} Component={SimpleProductItem} /></xmp></pre>
+            <h4>Resultaat:</h4>
+            <p>
+                <img src="assets/images/Pagination.gif" alt="Component Pagination">
+            </p>
             <hr>
             <h3>Carousel</h3>
             <p>
@@ -170,6 +176,10 @@ import { Carousel } from '../../../functions/Carousel';
 
 // Geef een array mee met de afbeeldingen
 <Carousel images={product.images} fit="contain" /></xmp></pre>
+            <h4>Resultaat:</h4>
+            <p>
+                <img src="assets/images/Carousel.gif" alt="Component Carousel">
+            </p>
             <hr>
             <h2 id="systeem-variabele-componenten">Systeem variabele componenten</h2>
     </main>
