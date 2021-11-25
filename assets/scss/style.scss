@@ -45,6 +45,7 @@ main{
                         transition-property: transform color;
                         transition-duration: .3s;
                         transition-timing-function: $transition;
+                        transform: rotate(-90deg);
                         color: rgba($primary-color,.5);
                     }
                     &.active{
@@ -54,7 +55,7 @@ main{
                             pointer-events: all;
                         }
                         svg{
-                            transform: rotate(-90deg);
+                            transform: rotate(0deg);
                             color: rgba($primary-color,1);
                         }
                     }
@@ -97,7 +98,7 @@ main{
     .pg__content{
         width: 90%;
         max-width: 800px;
-        margin: auto;
+        margin: 0 auto 80px;
 
         h1{
             font-size: 60px;
@@ -119,14 +120,14 @@ main{
             line-height: 1.7;
             font-weight: 400;
             color: $black;
-            
+
             &:first-of-type{
                 font-size: 24px;
                 font-weight: 300;
                 color: lighten($black, 40%);
             }
         }
-        
+
         hr{
             height: 1px;
             margin-bottom: -1px;
@@ -175,7 +176,7 @@ blockquote{
     margin-right: -30px;
     border-radius: .5rem;
 
-    p{  
+    p{
         max-width: unset!important;
         margin: unset!important;
         color: $black!important;
@@ -186,5 +187,20 @@ blockquote{
             margin-bottom: 1em;
             display: block;
         }
+    }
+}
+
+pre{
+    border-radius: .5rem;
+    overflow: hidden;
+    background-color: $gray;
+    color: $black;
+    line-height: 1.2;
+    padding: 1em;
+    font-family: inherit;
+    overflow-x: auto;
+
+    xmp{
+        margin: 0;
     }
 }

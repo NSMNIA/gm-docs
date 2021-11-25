@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Componenten – Platform Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+    <main>
+        <div class="pg__doc">
+            <div class="pg__doc--title">Platform Generator</div>
+            <ul class="pg__doc--menu">
+                <li class="pg__doc--menu-item">
+                    <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                        Installatie
+                    </span>
+                    <ul class="pg__doc--menu-item--list">
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="index.html" class="pg__doc--link">
+                                Getting Started
+                            </a>
+                        </li>
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="/" class="pg__doc--link">
+                                Accounts beheren
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="pg__doc--menu-item">
+                    <span class="active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                        Front-end
+                    </span>
+                    <ul class="pg__doc--menu-item--list">
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="frontend-structuur.html" class="pg__doc--link">
+                                Structuur
+                            </a>
+                        </li>
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="frontend-componenten.html" class="pg__doc--link active">
+                                Componenten
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="pg__doc--menu-item">
+                    <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                        Back-end
+                    </span>
+                    <ul class="pg__doc--menu-item--list">
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="/" class="pg__doc--link">
+                                Over Strapi
+                            </a>
+                        </li>
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="/" class="pg__doc--link">
+                                Kolommen toevoegen
+                            </a>
+                        </li>
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="/" class="pg__doc--link">
+                                Tabellen toevoegen
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="pg__doc--menu-item">
+                    <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                        Skeleton
+                    </span>
+                    <ul class="pg__doc--menu-item--list">
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="/" class="pg__doc--link">
+                                Front-end
+                            </a>
+                        </li>
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="/" class="pg__doc--link">
+                                Back-end
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="pg__content">
+            <h1>Front-end componenten</h1>
+            <p>Deze pagina is een overzicht van de componenten van de front-end.</p>
+            <hr>
+            <ul class="pg__toc">
+                <li><a href="#functionele-componeten" class="pg__link">Functionele componenten</a></li>
+                <li><a href="#systeem-variabele-componenten" class="pg__link">Systeem variabele componenten</a></li>
+            </ul>
+            <hr>
+            <h2 id="functionele-componenten">Functionele componenten</h2>
+            <p>
+                Functionele componenten zijn eigenlijk componenten die vaker gebruikt kunnen worden zoals <i>Image</i>, <i>Pagination</i> of <i>Carousel</i>.
+            </p>
+            <hr>
+            <h3 id="component-image">Image</h3>
+            <p>
+                De component Image zorgt er voor dat er een placeholder komt voor een afbeelding als deze nog niet geladen is. De
+                placeholder verdwijnt zodra de afbeelding volledig geladen is en op die zelfde plek verschijnt dan een img tag.
+            </p>
+            <h4>
+                Hoe te gebruiken:
+            </h4>
+            <pre><xmp>import { Image } from '../../functions/Image';
+...
+<Image src={URL} alt={ALT} fit="cover" /></xmp></pre>
+            <h4>Resultaat</h4>
+
+            <hr>
+            <h3>Pagination</h3>
+            <p>
+                De component <i>Pagination</i> zorgt er voor dat alle producten of blogitems automatisch worden opgedeeld in pagina's. Bij deze component is het noodzakelijk om de items per pagina,
+                totale items, de items zelf en de component waar het uiteindelijk de data moet invullen mee te sturen.
+            </p>
+            <h4>
+                Hoe te gebruiken:
+            </h4>
+            <pre><xmp>// Pagination inladen
+import { Pagination } from '../../components/functions/Pagination';
+
+// Component inladen waarin de data gevuld moet worden
+import { SimpleProductItem } from '../../components/eCommerce/products/thumbnails/SimpleProductItem';
+
+// items array wordt ingeladen via Socket.io
+const TotalItems = 8;
+
+// Pagination oproepen
+<Pagination itemsPerPage={TotalItems} totalItems={items.length} items={items} Component={SimpleProductItem} /></xmp></pre>
+            <hr>
+            <h3>Carousel</h3>
+            <p>
+                <i>Carousel</i> zorgt er voor dat de afbeeldingen van bijvoorbeeld producten mooi worden weergegeven in een carousel. De component <i>Carousel</i> maakt ook gebruik van de component
+                <i>Image</i>.
+            </p>
+            <h4>Hoe te gebruiken:</h4>
+            <pre><xmp>// Importeer de component
+import { Carousel } from '../../../functions/Carousel';
+
+// Geef een array mee met de afbeeldingen
+<Carousel images={product.images} fit="contain" /></xmp></pre>
+            <hr>
+            <h2 id="systeem-variabele-componenten">Systeem variabele componenten</h2>
+    </main>
+    <script src="assets/js/main.ob.js"></script>
+</body>
+
+</html>
