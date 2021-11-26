@@ -116,6 +116,11 @@
             <hr>
             <h2 id="socket-io">Socket.io</h2>
             <p>
+                Data ophalen vanuit de back-end gebeurt met <a href="https://socket.io/" class="pg__link">Socket.io</a>. Socket.io is
+                een library die realtime, bidirectionele en op gebeurtenissen gebaseerde communicatie tussen de browser en de server
+                mogelijk maakt.
+            </p>
+            <p>
                 In <i>/config/functions/bootstrap.js</i> in <i>module.export()</i> staat de initialisatie van Socket.io. Pas de <i>origin</i> aan naar de Front-end URI. Dit zou eventueel ook
                 kunnen met een <i>.env</i> bestand voor de back-end. Deze code zorgt ervoor dat alleen deze Front-end de data op mag halen via Socket.io.
             </p>
