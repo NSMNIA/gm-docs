@@ -31,11 +31,6 @@
                                 Getting Started
                             </a>
                         </li>
-                        <li class="pg__doc--menu-item--list__item">
-                            <a href="/" class="pg__doc--link">
-                                Accounts beheren
-                            </a>
-                        </li>
                     </ul>
                 </li>
 
@@ -71,18 +66,13 @@
                     </span>
                     <ul class="pg__doc--menu-item--list">
                         <li class="pg__doc--menu-item--list__item">
-                            <a href="/" class="pg__doc--link">
+                            <a href="backend-strapi.html" class="pg__doc--link">
                                 Over Strapi
                             </a>
                         </li>
                         <li class="pg__doc--menu-item--list__item">
-                            <a href="/" class="pg__doc--link">
-                                Kolommen toevoegen
-                            </a>
-                        </li>
-                        <li class="pg__doc--menu-item--list__item">
-                            <a href="/" class="pg__doc--link">
-                                Tabellen toevoegen
+                            <a href="backend-database.html" class="pg__doc--link">
+                                Database
                             </a>
                         </li>
                     </ul>
@@ -300,7 +290,7 @@ ReactDOM.render(
     <blockquote>
         <p>👍 Tip van Kevin</p>
         <p>
-            De Socket.io instellingen worden bepaald in de Front- en Back-end. In de Front-end zijn deze instellingen te vinden in <i>/config/Socket.js</i>. In de Back-end documentatie is
+            De Socket.io instellingen worden bepaald in de Front- en Back-end. In de Front-end zijn deze instellingen te vinden in <i>/config/Socket.js</i>. In de <a class="pg__link" href="backend-strapi.html#socket-io">Back-end documentatie</a> is
             meer te vinden over Socket.io.
         </p>
     </blockquote>
@@ -318,6 +308,7 @@ return <SimpleBlogDetail blog={blog}/>
 export const SimpleBlogDetail = ({blog}) => {
     console.log(blog);
 }</xmp></pre>
+    </div>
     </main>
     <script src="assets/js/main.ob.js"></script>
 </body>

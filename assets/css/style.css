@@ -294,3 +294,9 @@ pre {
 pre xmp {
   margin: 0;
 }
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 450px;
+}

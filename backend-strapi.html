@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Componenten – Platform Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+
+<body>
+    <main>
+        <div class="pg__doc">
+            <div class="pg__doc--title">Platform Generator</div>
+            <ul class="pg__doc--menu">
+                <li class="pg__doc--menu-item">
+                    <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                        Installatie
+                    </span>
+                    <ul class="pg__doc--menu-item--list">
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="index.html" class="pg__doc--link">
+                                Getting Started
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="pg__doc--menu-item">
+                    <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                        Front-end
+                    </span>
+                    <ul class="pg__doc--menu-item--list">
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="frontend-structuur.html" class="pg__doc--link">
+                                Structuur
+                            </a>
+                        </li>
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="frontend-componenten.html" class="pg__doc--link">
+                                Componenten
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="pg__doc--menu-item">
+                    <span class="active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                        Back-end
+                    </span>
+                    <ul class="pg__doc--menu-item--list">
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="backend-strapi.html" class="pg__doc--link active">
+                                Over Strapi
+                            </a>
+                        </li>
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="backend-database.html" class="pg__doc--link">
+                                Database
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="pg__doc--menu-item">
+                    <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                        Skeleton
+                    </span>
+                    <ul class="pg__doc--menu-item--list">
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="/" class="pg__doc--link">
+                                Front-end
+                            </a>
+                        </li>
+                        <li class="pg__doc--menu-item--list__item">
+                            <a href="/" class="pg__doc--link">
+                                Back-end
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="pg__content">
+            <h1>Back-end Strapi</h1>
+            <p>Deze pagina is een overzicht over wat Strapi is en hoe het is ingericht.</p>
+            <p>
+                <a href="https://strapi.io/" class="pg__link">Strapi</a> is een open-source Headless CMS. Het is gemaakt in JavaScript en volledig aanpasbaar. Via een API call vanuit de Front-end
+                kan de data opgehaald worden.
+            </p>
+            <hr>
+            <ul class="pg__toc">
+                <li><a href="#socket-io" class="pg__link">Socket.io</a></li>
+                <li><a href="#mollie" class="pg__link">Mollie</a></li>
+            </ul>
+            <hr>
+            <h2 id="socket-io">Socket.io</h2>
+            <p>
+                In <i>/config/functions/bootstrap.js</i> in <i>module.export()</i> staat de initialisatie van Socket.io. Pas de <i>origin</i> aan naar de Front-end URI. Dit zou eventueel ook
+                kunnen met een <i>.env</i> bestand voor de back-end. Deze code zorgt ervoor dat alleen deze Front-end de data op mag halen via Socket.io.
+            </p>
+            <pre><xmp>const io = require("socket.io")(strapi.server, {
+    cors: {
+        origin: "http://localhost:3000",
+        methods: ["GET", "POST"],
+    },
+});</xmp></pre>
+            <p>
+                Als de connectie werkt worden de functies pas geïnitialiseerd.
+            </p>
+            <pre><xmp>io.on("connection", function (socket) {
+    // functies voor data ophalen
+}</xmp></pre>
+        <hr>
+        <h3>Data functie ophalen</h3>
+        <p>
+            Om de juiste data op te halen bij de call wordt er gevraagd voor de naamgeving. Als deze naamgeving klopt moet er een andere functie aangeroepen worden die zorgt dat er data opgehaald
+            wordt. Dit hoeft niet perse maar dit maak het wel een stuk overzichtelijk.
+        </p>
+        <pre><xmp>socket.on('product', async ({id}, callback) => {
+    try{
+    const product = await getProduct({id});
+        if(product){
+            callback(product);
+        }else{
+            console.error('Error');
+            callback({ type: "error", message: 'Product doens\'t exist.' });
+        }
+    }catch(err){
+        console.error({ err });
+        callback({ type: "error", message: err });
+    }
+})</xmp></pre>
+        <p>
+            In dit geval is <i>product</i> de naamgeving en <i>GetProduct</i> de functie. <i>GetProduct</i> is te vinden in <i>/config/functions/utils/product-database.js</i>. Voer dan een query uit
+            voor de data die gevraagd moet worden. Om meer over de Strapi queries te vinden:
+            <a target="_blank" href="https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#queries" class="pg__link">Strapi query documentatie</a>
+        </p>
+        <pre><xmp>async function getProduct({id}){
+    try {
+        const product = await strapi.query('products').findOne({id: id});
+        delete product?.created_by;
+        delete product?.updated_by;
+        return product;
+    }catch(err){
+        console.log({ err });
+        return { type: "error", message: "This product doesn't exist." };
+    }
+}
+...
+module.exports = {
+    getProduct,
+};</xmp></pre>
+        <blockquote>
+            <p>👍 Tip van Kevin</p>
+            <p>Zorg ervoor dat als er een nieuwe functie wordt toegevoegd in <i>product-database.js</i> of <i>article-database.js</i> dat deze wordt meegegeven in <i>module.export</i>
+                 en wordt opgevangen in <i>bootstrap.js</i>:
+<pre><xmp>const { getProduct } = require("./utils/product-database");</xmp></pre>
+            </p>
+        </blockquote>
+        <p>
+            Om deze query uit te voeren moet het aangeroepen worden in de Front-end. In de functie <i>socket.emit</i> moet eerst de naamgeving (in dit geval <i>"product"</i>) worden gegeven en daarna de
+            data die meegestuurd moet worden (<i>"id"</i>). Daarna moet een functie komen die de data afhandeld.
+        </p>
+        <pre><xmp>//Front-end
+try {
+    socket.open();
+    socket.emit("product",{ id: props.match.params.id }, (product) => {
+        "type"in product&&"error"===product.type&&setError(!0);
+        setProduct(product);
+    });
+} catch (err) {
+    console.error(err);
+    setError(false);
+}
+
+return () => {
+    socket.close();
+}
+        </xmp></pre>
+        <blockquote>
+            <p>👍 Tip van Kevin</p>
+            <p>
+                <pre><xmp>"type"in product&&"error"===product.type&&setError(!0);</xmp></pre>
+                Deze functie kijkt of in de variabele <i>product.type</i> een waarde heeft van <i>error</i>. Als deze error er is dan wordt de <i>useState</i> op <i>true</i> gezet en kan in de
+                return van de component dit netjes afgehandeld worden.
+            </p>
+        </blockquote>
+        <hr>
+        <h2 id="mollie">Mollie</h2>
+        <p>
+            De officiële <a href="https://github.com/mollie/mollie-api-node" target="_blank" class="pg__link">Mollie NodeJS documentatie</a> geeft aan dat Mollie altijd in de back-end
+            aangemaakt moet worden. Dit komt omdat anders de <i>API key</i> en data gezien kan worden in de Front-end. Hoe payment nu gedaan wordt en hoe Strapi de betaling checkt zijn er twee
+            verschillende functies gemaakt in <i>/api/order/controllers/order.js</i>.
+        </p>
+        </div>
+    </main>
+    <script src="assets/js/main.ob.js"></script>
+</body>
+
+</html>
