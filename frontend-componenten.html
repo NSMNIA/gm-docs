@@ -117,6 +117,7 @@
             <hr>
             <ul class="pg__toc">
                 <li><a href="#functionele-componenten" class="pg__link">Functionele componenten</a></li>
+                <li><a href="#standaard-componenten" class="pg__link">Standaard componenten</a></li>
                 <li><a href="#systeem-variabele-componenten" class="pg__link">Systeem variabele componenten</a></li>
             </ul>
             <hr>
@@ -154,10 +155,10 @@ import { Pagination } from '../../components/functions/Pagination';
 
 // Component inladen waarin de data gevuld moet worden
 import { SimpleProductItem } from '../../components/eCommerce/products/thumbnails/SimpleProductItem';
-
+...
 // items array wordt ingeladen via Socket.io
 const TotalItems = 8;
-
+...
 // Pagination oproepen
 <Pagination itemsPerPage={TotalItems} totalItems={items.length} items={items} Component={SimpleProductItem} /></xmp></pre>
             <h4>Resultaat:</h4>
@@ -173,7 +174,7 @@ const TotalItems = 8;
             <h4>Hoe te gebruiken:</h4>
             <pre><xmp>// Importeer de component
 import { Carousel } from '../../../functions/Carousel';
-
+...
 // Geef een array mee met de afbeeldingen
 <Carousel images={product.images} fit="contain" /></xmp></pre>
             <h4>Resultaat:</h4>
@@ -181,7 +182,142 @@ import { Carousel } from '../../../functions/Carousel';
                 <img src="assets/images/Carousel.gif" alt="Component Carousel">
             </p>
             <hr>
+            <h2 id="standaard-componenten">Standaard componenten</h2>
+            <p>
+                Bij standaard componenten worden bijvoorbeeld <i>navigatie</i> en <i>footer</i> bedoeld. Voor deze componenten is een standaard component gemaakt. Deze gemaakte componenten
+                bevatten minimale stijling. Deze componenten worden in de <i>/src/index.js</i> aangeroepen.
+            </p>
+            <hr>
+            <h3>Navigatie</h3>
+            <p>
+                Er zijn twee verschillende gemaakte navigatie componenten, deze bevinden zich in <i>/src/components/navigation/type</i>. In deze componenten staat hoe beschreven hoe de
+                <i>React</i> functies, <i>useState</i> en <i>useEffect</i> werken.
+            </p>
+            <p>
+                <b>useState: </b><i>open</i> is gelijk aan <i>false</i>. Als er op de hamburger van de navigatie wordt geklikt dan moet de <i>onClick</i> functie zijn werk doen.
+                Als er op geklikt wordt als <i>open</i> <i>false</i> is wordt het statement <i>true</i> en als <i>open</i> gelijk is aan <i>true</i> wordt het statement <i>false</i>.
+                ReactJS update de classes automatisch, dus in de <i>className</i> komt er <i>active</i> achter als statement <i>open</i> gelijk is aan <i>true</i>. Meer informatie over
+                <a href="https://reactjs.org/docs/hooks-reference.html#usestate" class="pg__link">useState</a>
+            </p>
+            <pre><xmp>const [open, setOpen] = useState(false);
+...
+<button onClick={()=>setOpen(!open))} className={open ? "nav_toggle active" : "nav_toggle"}>
+    Menu button
+</button></xmp></pre>
+            <p>
+                <img src="assets/images/Navigation.gif" alt="Component Carousel">
+            </p>
+            <p>
+                <b>useEffect: </b> Deze funtie wil pas gaan uitvoeren nadat de render op het scherm is vastgelegd. Standaard wordt de useState na elke voltooide render opnieuw uitgevoerd, maar
+                er kan ook voor gekozen worden dat deze alleen te activeren zijn wanneer bepaalde waarden gewijzigd zijn. Meer informatie over
+                <a href="https://reactjs.org/docs/hooks-reference.html#useeffect" class="pg__link">useEffect</a>.
+            </p>
+            <pre><xmp>const [offset, setOffset] = useState(false);
+...
+useEffect(() => {
+    window.onscroll = () => {
+        if(window.pageYOffset > 10){
+            setOffset(true);
+        }else{
+            setOffset(false);
+        }
+    }
+}, []);
+            </xmp></pre>
+            <p>
+                <img src="assets/images/Navigation-2.gif" alt="Component Carousel">
+            </p>
+            <blockquote>
+                <p>👍 Tip van Kevin</p>
+                <p>
+                    Om de navigatie zo dynamisch mogelijk te maken heb ik componenten gemaakt zoals <i>Links</i>, <i>Logo</i> en <i>CartLink</i>. Hierin worden alle interne links in
+                    gemaakt en hergebruikt bij verschillende componenten zoals de navigatie en footer.
+                    <pre><xmp><Links close={closeMenu}/>
+
+// Links.js
+{process.env.REACT_APP_ECOMMERCE === 'true' ? (process.env.REACT_APP_CALENDAR !== 'true' ? <NavLink onClick={closeMenu} to="/products" className="nav_link">Products</NavLink> : <NavLink onClick={closeMenu} to="/bookings" className="nav_link">Bookings</NavLink>) : null}
+<CartLink onClick={closeMenu} isEcommerce={process.env.REACT_APP_ECOMMERCE==='true' ? true : false} /></xmp></pre>
+                </p>
+            </blockquote>
+            <h4>Navigatie implementeren in de website</h4>
+            <p>
+                Voeg een bestand toe in de map <i>/src/components/navigation/type</i>, bijvoorbeeld met de naam <i>GravityNav</i>. Het pad hoeft in de <i>/src/index.js</i> uiteindelijk alleen aangepast te worden naar de bestandsnaam.
+                De naamgeving <i>Nav</i> kan als variabele hetzelfde blijven. Zodra deze <i>Nav</i> in de <i>Router</i> wordt meegegeven blijft de navigatie zichtbaar op elke pagina.
+            </p>
+            <pre><xmp>// Index.js
+import Nav from './components/navigation/type/GravityNav';
+...
+ReactDOM.render(
+...
+<Router>
+    <Nav />
+    ...
+</Router>
+)
+</xmp></pre>
+            <hr>
+            <h3>Footer</h3>
+            <p>
+                Voor de footer geldt precies hetzelfde zoals de navigatie.
+            </p>
+            <pre><xmp>// index.js
+import Footer from './components/footer/SimpleFooter';
+...
+ReactDOM.render(
+    ...
+    <Router>
+        ...
+        <Footer/>
+    </Router>
+    ...
+)</xmp></pre>
+            <hr>
             <h2 id="systeem-variabele-componenten">Systeem variabele componenten</h2>
+            <p>
+                Om de systeem variabelen te gebruiken worden de pagina's alleen ingeladen als dit aangegeven staat in de <i>.env</i>. Dit heeft met de pagina's te maken. De pagina's van bijvoorbeeld
+                producten worden ingeladen met componenten van producten. Zodat er in de pagina's alleen data wordt opgehaald en in de componenten gestopt wordt.
+            </p>
+            <h3>Data ophalen</h3>
+            <p>
+                Data ophalen vanuit de back-end gebeurd met <a href="https://socket.io/" class="pg__link">Socket.io</a>. Socket.io is een library die realtime, bidirectionele en op gebeurtenissen gebaseerde communicatie tussen de browser en de server mogelijk maakt.
+            </p>
+            <pre><xmp>useEffect(()=>{
+    try {
+        socket.open();
+        socket.emit("product",{ id: props.match.params.id }, (product) => {
+            "type"in product&&"error"===product.type&&setError(!0);
+            setProduct(product);
+        });
+    } catch (err) {
+        console.error(err);
+        setError(false);
+    }
+
+    return () => {
+        socket.close();
+    }
+},[props.match.params.id])</xmp></pre>
+    <blockquote>
+        <p>👍 Tip van Kevin</p>
+        <p>
+            De Socket.io instellingen worden bepaald in de Front- en Back-end. In de Front-end zijn deze instellingen te vinden in <i>/config/Socket.js</i>. In de Back-end documentatie is
+            meer te vinden over Socket.io.
+        </p>
+    </blockquote>
+    <hr>
+    <h3>Componenten aanroepen</h3>
+    <p>
+        In de pagina's van <i>eCommerce</i> en <i>Blog</i> worden de losse componenten aangeroepen. De bedoeling van deze componenten is dat er meerdere componenten met dezelfde functies komen voor
+        bijvoorbeeld verschillende platformen. Om bijvoorbeeld een blog item te laten weergeven moet er data meegestuurd worden met het component. In het component komt de data binnen en hierna kan
+        er besloten worden wat er mee gedaan kan worden.
+    </p>
+    <pre><xmp>// /pages/blog/Details.js
+return <SimpleBlogDetail blog={blog}/>
+
+// SimpleBlogDetail
+export const SimpleBlogDetail = ({blog}) => {
+    console.log(blog);
+}</xmp></pre>
     </main>
     <script src="assets/js/main.ob.js"></script>
 </body>
