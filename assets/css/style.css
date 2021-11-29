@@ -297,6 +297,59 @@ pre xmp {
 
 iframe {
   width: 100%;
-  aspect-ratio: 16 / 9;
   max-height: 450px;
+}
+
+.pg__buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.pg__buttons .pg__button--redirect {
+  border: 1px solid #F2F4F7;
+  padding: 2rem;
+  border-radius: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #212121;
+  -webkit-transition-property: -webkit-transform border-color;
+  transition-property: -webkit-transform border-color;
+  transition-property: transform border-color;
+  transition-property: transform border-color, -webkit-transform border-color;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pg__buttons .pg__button--redirect:active {
+  -webkit-transform: scale(0.96);
+          transform: scale(0.96);
+}
+
+.pg__buttons .pg__button--redirect:focus {
+  border-color: #212121;
+}
+
+.pg__buttons .pg__button--redirect.forward::after {
+  content: '>';
+  font-size: 2rem;
+  font-family: inherit;
+}
+
+.pg__buttons .pg__button--redirect.back::before {
+  content: '<';
+  font-size: 2rem;
+  font-family: inherit;
 }

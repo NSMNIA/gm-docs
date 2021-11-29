@@ -209,3 +209,42 @@ iframe{
     width: 100%;
     max-height: 450px;
 }
+
+.pg__buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    .pg__button--redirect{
+        border: 1px solid $gray;
+        padding: 2rem;
+        border-radius: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $black;
+        transition-property: transform border-color;
+        transition-duration: .3s;
+        transition-timing-function: $transition;
+        &:active{
+            transform: scale(.96);
+        }
+        &:focus{
+            border-color: $black;
+        }
+        &.forward{
+            &::after{
+                content: '>';
+                font-size: 2rem;
+                font-family: inherit;
+            }
+        }
+        &.back{
+            &::before{
+                content: '<';
+                font-size: 2rem;
+                font-family: inherit;
+            }
+        }
+    }
+}
