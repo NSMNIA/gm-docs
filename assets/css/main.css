@@ -196,6 +196,10 @@ ul {
   z-index: 10;
   width: 270px;
   min-width: 270px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .pg__content .pg__column .pg__navigation .pg__navigation--text {
@@ -318,6 +322,10 @@ ul {
   width: 100%;
   border-radius: 5px;
   margin: 10px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .pg__content .pg__column .pg__documentation .pg__video {
@@ -364,6 +372,10 @@ ul {
 }
 
 .pg__content .pg__column .pg__toc .pg__toc--page {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 2px;
