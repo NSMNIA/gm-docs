@@ -5,137 +5,180 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Componenten – Platform Generator</title>
+    <title>Componenten – Platform Generator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.min.css">
 </head>
 
 <body>
-    <main>
-        <div class="pg__doc">
-            <div class="pg__doc--title">Platform Generator</div>
-            <ul class="pg__doc--menu">
-                <li class="pg__doc--menu-item">
-                    <span class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                        Installatie
-                    </span>
-                    <ul class="pg__doc--menu-item--list">
-                        <li class="pg__doc--menu-item--list__item">
-                            <a href="index.html" class="pg__doc--link">
-                                Getting Started
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="pg__doc--menu-item">
-                    <span class="active">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                        Front-end
-                    </span>
-                    <ul class="pg__doc--menu-item--list">
-                        <li class="pg__doc--menu-item--list__item">
-                            <a href="frontend-structuur.html" class="pg__doc--link">
-                                Structuur
-                            </a>
-                        </li>
-                        <li class="pg__doc--menu-item--list__item">
-                            <a href="frontend-componenten.html" class="pg__doc--link active">
-                                Componenten
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="pg__doc--menu-item">
-                    <span class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                        Back-end
-                    </span>
-                    <ul class="pg__doc--menu-item--list">
-                        <li class="pg__doc--menu-item--list__item">
-                            <a href="backend-strapi.html" class="pg__doc--link">
-                                Over Strapi
-                            </a>
-                        </li>
-                        <li class="pg__doc--menu-item--list__item">
-                            <a href="backend-database.html" class="pg__doc--link">
-                                Database
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="pg__doc--menu-item">
-                    <span class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                        Skeleton
-                    </span>
-                    <ul class="pg__doc--menu-item--list">
-                        <li class="pg__doc--menu-item--list__item">
-                            <a href="skeleton.html" class="pg__doc--link">
-                                Skeleton updaten
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+    <nav class="pg__nav-bar">
+        <div class="pg__nav-bar--content">
+            <a class="pg__nav-bar--logo" href="/">
+                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 422.46">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #F88F01;
+                            }
+                        </style>
+                    </defs>
+                    <path class="cls-1"
+                        d="M634.79,295.4c-5.91,13.62-12.72,30-20.22,48.64s-15.38,38.58-24.07,61.08l-9.9,25.36c-8.25,21.35-16.4,42-24.23,61.32-7.35,18.2-14,34.35-19.75,47.83-5.75-13.54-12.31-29.61-19.5-47.8q-11.62-29.19-24.49-61.36l-9.85-25.34c-7.64-19.79-15.52-39.77-24.08-61.09-7.73-19.11-14.54-35.48-20.26-48.64l-1.4-3.22H395.65l3.35,7.53c4.86,10.92,10.69,24.67,17.33,40.87h0q10.55,25.52,23,56,10.86,26.64,22.57,55.07L465.3,460q13.51,32.83,26,63.32c9.39,22.9,16.77,40.67,23.23,55.9,6.8,16,12.57,29.89,17.15,41.15l4.79,11.79,5.07-11.68C546.14,609.85,552,596,559,579.2q10.54-25.35,23-55.88T607.73,460q13.32-32.91,25.77-63.37c8-19.52,15.76-38.36,23.18-56l1.41-3.37q9.76-23.25,15.77-37.66l3.09-7.41H636.19Z"
+                        transform="translate(-164.94 -209.72)" />
+                    <path class="cls-1"
+                        d="M425.56,501.31v0q-10.55-25.5-23-56Q391.7,418.59,380,390.11l-3.38-8.23q-13.51-32.83-26-63.33c-9.33-22.74-16.71-40.5-23.23-55.89-6.81-16.06-12.58-29.9-17.15-41.15l-4.79-11.79-5.07,11.67c-4.6,10.59-10.47,24.49-17.43,41.3s-14.7,35.52-23,55.87S243.05,360,234.16,381.91s-17.47,43-25.77,63.36c-7.94,19.48-15.74,38.32-23.18,56q-10.74,25.58-17.18,41l-3.09,7.4H205.7l1.4-3.22c5.9-13.59,12.71-30,20.22-48.64s15.38-38.58,24.07-61.07l9.9-25.36c8.24-21.35,16.4-42,24.22-61.33,7.37-18.24,14-34.39,19.76-47.83,5.74,13.51,12.3,29.59,19.5,47.81q11.63,29.19,24.49,61.36l9.85,25.33c7.64,19.77,15.51,39.75,24.07,61.1,7.75,19.15,14.57,35.51,20.27,48.63l1.4,3.22h41.39l-3.35-7.52C438.05,531.31,432.22,517.56,425.56,501.31Z"
+                        transform="translate(-164.94 -209.72)" />
+                </svg>
+            </a>
+            <div>
+                <a href="https://136.144.240.117/" class="pg__link button" target="_blank">Platform Generator</a>
+            </div>
         </div>
-        <div class="pg__content">
-            <h1>Front-end componenten</h1>
-            <p>Deze pagina is een overzicht van de componenten van de front-end.</p>
-            <hr>
-            <ul class="pg__toc">
-                <li><a href="#functionele-componenten" class="pg__link">Functionele componenten</a></li>
-                <li><a href="#standaard-componenten" class="pg__link">Standaard componenten</a></li>
-                <li><a href="#systeem-variabele-componenten" class="pg__link">Systeem variabele componenten</a></li>
-            </ul>
-            <hr>
-            <h2 id="functionele-componenten">Functionele componenten</h2>
-            <p>
-                Functionele componenten zijn eigenlijk componenten die vaker gebruikt kunnen worden zoals <i>Image</i>, <i>Pagination</i> of <i>Carousel</i>.
-            </p>
-            <hr>
-            <h3 id="component-image">Image</h3>
-            <p>
-                De component Image zorgt er voor dat er een placeholder komt voor een afbeelding als deze nog niet geladen is. De
-                placeholder verdwijnt zodra de afbeelding volledig geladen is en op die zelfde plek verschijnt dan een img tag.
-            </p>
-            <h4>
-                Hoe te gebruiken:
-            </h4>
-            <pre><xmp>import { Image } from '../../functions/Image';
+    </nav>
+
+    <article class="pg__content">
+        <div class="pg__column">
+            <div class="pg__navigation">
+                <div class="pg__navigation--text">
+                    Installatie
+                </div>
+                <a class="pg__navigation--link" href="/">
+                    <div class="pg__navigation--icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"></path>
+                        </svg>
+                    </div>
+                    <div class="pg__navigation--link-title">
+                        Getting Started
+                    </div>
+                </a>
+                <div class="pg__navigation--text">
+                    Front-end
+                </div>
+                <a class="pg__navigation--link" href="/frontend-structuur.html">
+                    <div class="pg__navigation--icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 17l2-5h14l-3 8a2 2 0 01-2 1H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h7a2 2 0 012 2v4">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="pg__navigation--link-title">
+                        Structuur
+                    </div>
+                </a>
+                <a class="pg__navigation--link active" href="/frontend-componenten.html">
+                    <div class="pg__navigation--icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="pg__navigation--link-title">
+                        Componenten
+                    </div>
+                </a>
+                <div class="pg__navigation--text">
+                    Backend-end
+                </div>
+                <a class="pg__navigation--link" href="/backend-strapi.html">
+                    <div class="pg__navigation--icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                            <path d="M9 22v-4h6v4"></path>
+                            <path d="M8 6h.01"></path>
+                            <path d="M16 6h.01"></path>
+                            <path d="M12 6h.01"></path>
+                            <path d="M12 10h.01"></path>
+                            <path d="M12 14h.01"></path>
+                            <path d="M16 10h.01"></path>
+                            <path d="M16 14h.01"></path>
+                            <path d="M8 10h.01"></path>
+                            <path d="M8 14h.01"></path>
+                        </svg>
+                    </div>
+                    <div class="pg__navigation--link-title">
+                        Over Strapi
+                    </div>
+                </a>
+                <a class="pg__navigation--link" href="/backend-database.html">
+                    <div class="pg__navigation--icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                        </svg>
+                    </div>
+                    <div class="pg__navigation--link-title">
+                        Database
+                    </div>
+                </a>
+                <div class="pg__navigation--text">
+                    Skeleton
+                </div>
+                <a class="pg__navigation--link" href="/skeleton.html">
+                    <div class="pg__navigation--icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 3H3v7h18V3z"></path>
+                            <path d="M21 14h-5v7h5v-7z"></path>
+                            <path d="M12 14H3v7h9v-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="pg__navigation--link-title">
+                        Updaten
+                    </div>
+                </a>
+            </div>
+            <div class="pg__documentation">
+                <h1 id="frontend_componenten">Componenten</h1>
+                <blockquote class="pg__documentation--start">
+                    Deze pagina is een overzicht van de componenten van de front-end.
+                </blockquote>
+                <h2 id="functionele-componenten">Functionele componenten</h2>
+                <p>
+                    Functionele componenten zijn eigenlijk componenten die vaker gebruikt kunnen worden zoals
+                    <i>Image</i>,
+                    <i>Pagination</i> of <i>Carousel</i>.
+                </p>
+                <h3 id="component-image">Image</h3>
+                <p>
+                    De component Image zorgt er voor dat er een placeholder komt voor een afbeelding als deze nog niet
+                    geladen is. De
+                    placeholder verdwijnt zodra de afbeelding volledig geladen is en op die zelfde plek verschijnt dan
+                    een img tag.
+                </p>
+                <h4>
+                    Hoe te gebruiken:
+                </h4>
+                <pre><xmp>import { Image } from '../../functions/Image';
 ...
 <Image src={URL} alt={ALT} fit="cover" /></xmp></pre>
-            <h4>Resultaat:</h4>
-            <p>
-                <img src="assets/images/Image.gif" alt="Component Image">
-            </p>
-            <hr>
-            <h3>Pagination</h3>
-            <p>
-                De component <i>Pagination</i> zorgt er voor dat alle producten of blogitems automatisch worden opgedeeld in pagina's. Bij deze component is het noodzakelijk om de items per pagina,
-                totale items, de items zelf en de component waar het uiteindelijk de data moet invullen mee te sturen.
-            </p>
-            <h4>
-                Hoe te gebruiken:
-            </h4>
-            <pre><xmp>// Pagination inladen
+                <h4>Resultaat:</h4>
+                <p>
+                    <img src="assets/images/Image.gif" alt="Component Image">
+                </p>
+                <h3>Pagination</h3>
+                <p>
+                    De component <i>Pagination</i> zorgt er voor dat alle producten of blogitems automatisch worden
+                    opgedeeld in pagina's. Bij deze component is het noodzakelijk om de items per pagina,
+                    totale items, de items zelf en de component waar het uiteindelijk de data moet invullen mee te
+                    sturen.
+                </p>
+                <h4>
+                    Hoe te gebruiken:
+                </h4>
+                <pre><xmp>// Pagination inladen
 import { Pagination } from '../../components/functions/Pagination';
 
 // Component inladen waarin de data gevuld moet worden
@@ -146,58 +189,70 @@ const TotalItems = 8;
 ...
 // Pagination oproepen
 <Pagination itemsPerPage={TotalItems} totalItems={items.length} items={items} Component={SimpleProductItem} /></xmp></pre>
-            <h4>Resultaat:</h4>
-            <p>
-                <img src="assets/images/Pagination.gif" alt="Component Pagination">
-            </p>
-            <hr>
-            <h3>Carousel</h3>
-            <p>
-                <i>Carousel</i> zorgt er voor dat de afbeeldingen van bijvoorbeeld producten mooi worden weergegeven in een carousel. De component <i>Carousel</i> maakt ook gebruik van de component
-                <i>Image</i>.
-            </p>
-            <h4>Hoe te gebruiken:</h4>
-            <pre><xmp>// Importeer de component
+                <h4>Resultaat:</h4>
+                <p>
+                    <img src="assets/images/Pagination.gif" alt="Component Pagination">
+                </p>
+                <h3>Carousel</h3>
+                <p>
+                    <i>Carousel</i> zorgt er voor dat de afbeeldingen van bijvoorbeeld producten mooi worden weergegeven
+                    in een
+                    carousel. De component <i>Carousel</i> maakt ook gebruik van de component
+                    <i>Image</i>.
+                </p>
+                <h4>Hoe te gebruiken:</h4>
+                <pre><xmp>// Importeer de component
 import { Carousel } from '../../../functions/Carousel';
 ...
 // Geef een array mee met de afbeeldingen
 <Carousel images={product.images} fit="contain" /></xmp></pre>
-            <h4>Resultaat:</h4>
-            <p>
-                <img src="assets/images/Carousel.gif" alt="Component Carousel">
-            </p>
-            <hr>
-            <h2 id="standaard-componenten">Standaard componenten</h2>
-            <p>
-                Bij standaard componenten worden bijvoorbeeld <i>navigatie</i> en <i>footer</i> bedoeld. Voor deze componenten is een standaard component gemaakt. Deze gemaakte componenten
-                bevatten minimale stijling. Deze componenten worden in de <i>/src/index.js</i> aangeroepen.
-            </p>
-            <hr>
-            <h3>Navigatie</h3>
-            <p>
-                Er zijn twee verschillende gemaakte navigatie componenten, deze bevinden zich in <i>/src/components/navigation/type</i>. In deze componenten staat hoe beschreven hoe de
-                <i>React</i> functies, <i>useState</i> en <i>useEffect</i> werken.
-            </p>
-            <p>
-                <b>useState: </b><i>open</i> is gelijk aan <i>false</i>. Als er op de hamburger van de navigatie wordt geklikt dan moet de <i>onClick</i> functie zijn werk doen.
-                Als er op geklikt wordt als <i>open</i> <i>false</i> is wordt het statement <i>true</i> en als <i>open</i> gelijk is aan <i>true</i> wordt het statement <i>false</i>.
-                ReactJS update de classes automatisch, dus in de <i>className</i> komt er <i>active</i> achter als statement <i>open</i> gelijk is aan <i>true</i>. Meer informatie over
-                <a href="https://reactjs.org/docs/hooks-reference.html#usestate" class="pg__link">useState</a>
-            </p>
-            <pre><xmp>const [open, setOpen] = useState(false);
+                <h4>Resultaat:</h4>
+                <p>
+                    <img src="assets/images/Carousel.gif" alt="Component Carousel">
+                </p>
+                <h2 id="standaard_componenten">Standaard componenten</h2>
+                <p>
+                    Bij standaard componenten worden bijvoorbeeld <i>navigatie</i> en <i>footer</i> bedoeld. Voor deze
+                    componenten is
+                    een standaard component gemaakt. Deze gemaakte componenten
+                    bevatten minimale stijling. Deze componenten worden in de <i>/src/index.js</i> aangeroepen.
+                </p>
+                <h3>Navigatie</h3>
+                <p>
+                    Er zijn twee verschillende gemaakte navigatie componenten, deze bevinden zich in
+                    <i>/src/components/navigation/type</i>. In deze componenten staat hoe beschreven hoe de
+                    <i>React</i> functies, <i>useState</i> en <i>useEffect</i> werken.
+                </p>
+                <p>
+                    <b>useState: </b><i>open</i> is gelijk aan <i>false</i>. Als er op de hamburger van de navigatie
+                    wordt geklikt dan
+                    moet de <i>onClick</i> functie zijn werk doen.
+                    Als er op geklikt wordt als <i>open</i> <i>false</i> is wordt het statement <i>true</i> en als
+                    <i>open</i> gelijk is
+                    aan <i>true</i> wordt het statement <i>false</i>.
+                    ReactJS update de classes automatisch, dus in de <i>className</i> komt er <i>active</i> achter als
+                    statement
+                    <i>open</i> gelijk is aan <i>true</i>. Meer informatie over
+                    <a href="https://reactjs.org/docs/hooks-reference.html#usestate" class="pg__link">useState</a>
+                </p>
+                <pre><xmp>const [open, setOpen] = useState(false);
 ...
 <button onClick={()=>setOpen(!open))} className={open ? "nav_toggle active" : "nav_toggle"}>
     Menu button
 </button></xmp></pre>
-            <p>
-                <img src="assets/images/Navigation.gif" alt="Component Carousel">
-            </p>
-            <p>
-                <b>useEffect: </b> Deze funtie wil pas gaan uitvoeren nadat de render op het scherm is vastgelegd. Standaard wordt de useState na elke voltooide render opnieuw uitgevoerd, maar
-                er kan ook voor gekozen worden dat deze alleen te activeren zijn wanneer bepaalde waarden gewijzigd zijn. Meer informatie over
-                <a href="https://reactjs.org/docs/hooks-reference.html#useeffect" class="pg__link">useEffect</a>.
-            </p>
-            <pre><xmp>const [offset, setOffset] = useState(false);
+                <p>
+                    <img src="assets/images/Navigation.gif" alt="Component Carousel">
+                </p>
+                <p>
+                    <b>useEffect: </b> Deze funtie wil pas gaan uitvoeren nadat de render op het scherm is vastgelegd.
+                    Standaard wordt
+                    de useState na elke voltooide render opnieuw uitgevoerd, maar
+                    er kan ook voor gekozen worden dat deze alleen te activeren zijn wanneer bepaalde waarden gewijzigd
+                    zijn. Meer
+                    informatie over
+                    <a href="https://reactjs.org/docs/hooks-reference.html#useeffect" class="pg__link">useEffect</a>.
+                </p>
+                <pre><xmp>const [offset, setOffset] = useState(false);
 ...
 useEffect(() => {
     window.onscroll = () => {
@@ -209,27 +264,34 @@ useEffect(() => {
     }
 }, []);
             </xmp></pre>
-            <p>
-                <img src="assets/images/Navigation-2.gif" alt="Component Carousel">
-            </p>
-            <blockquote>
-                <p>👍 Tip van Kevin</p>
                 <p>
-                    Om de navigatie zo dynamisch mogelijk te maken heb ik componenten gemaakt zoals <i>Links</i>, <i>Logo</i> en <i>CartLink</i>. Hierin worden alle interne links in
-                    gemaakt en hergebruikt bij verschillende componenten zoals de navigatie en footer.
+                    <img src="assets/images/Navigation-2.gif" alt="Component Carousel">
+                </p>
+                <blockquote class="pg__tip">
+                    <p>👍 Tip van Kevin</p>
+                    <p>
+                        Om de navigatie zo dynamisch mogelijk te maken heb ik componenten gemaakt zoals <i>Links</i>,
+                        <i>Logo</i> en
+                        <i>CartLink</i>. Hierin worden alle interne links in
+                        gemaakt en hergebruikt bij verschillende componenten zoals de navigatie en footer.
                     <pre><xmp><Links close={closeMenu}/>
 
 // Links.js
 {process.env.REACT_APP_ECOMMERCE === 'true' ? (process.env.REACT_APP_CALENDAR !== 'true' ? <NavLink onClick={closeMenu} to="/products" className="nav_link">Products</NavLink> : <NavLink onClick={closeMenu} to="/bookings" className="nav_link">Bookings</NavLink>) : null}
 <CartLink onClick={closeMenu} isEcommerce={process.env.REACT_APP_ECOMMERCE==='true' ? true : false} /></xmp></pre>
+                    </p>
+                </blockquote>
+                <h4>Navigatie implementeren in de website</h4>
+                <p>
+                    Voeg een bestand toe in de map <i>/src/components/navigation/type</i>, bijvoorbeeld met de naam
+                    <i>GravityNav</i>.
+                    Het pad hoeft in de <i>/src/index.js</i> uiteindelijk alleen aangepast te worden naar de
+                    bestandsnaam.
+                    De naamgeving <i>Nav</i> kan als variabele hetzelfde blijven. Zodra deze <i>Nav</i> in de
+                    <i>Router</i> wordt
+                    meegegeven blijft de navigatie zichtbaar op elke pagina.
                 </p>
-            </blockquote>
-            <h4>Navigatie implementeren in de website</h4>
-            <p>
-                Voeg een bestand toe in de map <i>/src/components/navigation/type</i>, bijvoorbeeld met de naam <i>GravityNav</i>. Het pad hoeft in de <i>/src/index.js</i> uiteindelijk alleen aangepast te worden naar de bestandsnaam.
-                De naamgeving <i>Nav</i> kan als variabele hetzelfde blijven. Zodra deze <i>Nav</i> in de <i>Router</i> wordt meegegeven blijft de navigatie zichtbaar op elke pagina.
-            </p>
-            <pre><xmp>// Index.js
+                <pre><xmp>// Index.js
 import Nav from './components/navigation/type/GravityNav';
 ...
 ReactDOM.render(
@@ -240,12 +302,11 @@ ReactDOM.render(
 </Router>
 )
 </xmp></pre>
-            <hr>
-            <h3>Footer</h3>
-            <p>
-                Voor de footer geldt precies hetzelfde zoals de navigatie.
-            </p>
-            <pre><xmp>// index.js
+                <h3>Footer</h3>
+                <p>
+                    Voor de footer geldt precies hetzelfde zoals de navigatie.
+                </p>
+                <pre><xmp>// index.js
 import Footer from './components/footer/SimpleFooter';
 ...
 ReactDOM.render(
@@ -256,17 +317,24 @@ ReactDOM.render(
     </Router>
     ...
 )</xmp></pre>
-            <hr>
-            <h2 id="systeem-variabele-componenten">Systeem variabele componenten</h2>
-            <p>
-                Om de systeem variabelen te gebruiken worden de pagina's alleen ingeladen als dit aangegeven staat in de <i>.env</i>. Dit heeft met de pagina's te maken. De pagina's van bijvoorbeeld
-                producten worden ingeladen met componenten van producten. Zodat er in de pagina's alleen data wordt opgehaald en in de componenten gestopt wordt.
-            </p>
-            <h3>Data ophalen</h3>
-            <p>
-                Data ophalen vanuit de back-end gebeurt met <a href="https://socket.io/" class="pg__link">Socket.io</a>. Socket.io is een library die realtime, bidirectionele en op gebeurtenissen gebaseerde communicatie tussen de browser en de server mogelijk maakt.
-            </p>
-            <pre><xmp>useEffect(()=>{
+                <h2 id="systeem_variable_componenten">Systeem variabele componenten</h2>
+                <p>
+                    Om de systeem variabelen te gebruiken worden de pagina's alleen ingeladen als dit aangegeven staat
+                    in de
+                    <i>.env</i>. Dit heeft met de pagina's te maken. De pagina's van bijvoorbeeld
+                    producten worden ingeladen met componenten van producten. Zodat er in de pagina's alleen data wordt
+                    opgehaald en in
+                    de componenten gestopt wordt.
+                </p>
+                <h3>Data ophalen</h3>
+                <p>
+                    Data ophalen vanuit de back-end gebeurt met <a href="https://socket.io/"
+                        class="pg__link">Socket.io</a>. Socket.io
+                    is een library die realtime, bidirectionele en op gebeurtenissen gebaseerde communicatie tussen de
+                    browser en de
+                    server mogelijk maakt.
+                </p>
+                <pre><xmp>useEffect(()=>{
     try {
         socket.open();
         socket.emit("product",{ id: props.match.params.id }, (product) => {
@@ -282,38 +350,103 @@ ReactDOM.render(
         socket.close();
     }
 },[props.match.params.id])</xmp></pre>
-    <blockquote>
-        <p>👍 Tip van Kevin</p>
-        <p>
-            De Socket.io instellingen worden bepaald in de Front- en Back-end. In de Front-end zijn deze instellingen te vinden in <i>/config/Socket.js</i>. In de <a class="pg__link" href="backend-strapi.html#socket-io">Back-end documentatie</a> is
-            meer te vinden over Socket.io.
-        </p>
-    </blockquote>
-    <hr>
-    <h3>Componenten aanroepen</h3>
-    <p>
-        In de pagina's van <i>eCommerce</i> en <i>Blog</i> worden de losse componenten aangeroepen. De bedoeling van deze componenten is dat er meerdere componenten met dezelfde functies komen voor
-        bijvoorbeeld verschillende platformen. Om bijvoorbeeld een blog item te laten weergeven moet er data meegestuurd worden met het component. In het component komt de data binnen en hierna kan
-        er besloten worden wat er mee gedaan kan worden.
-    </p>
-    <pre><xmp>// /pages/blog/Details.js
+                <blockquote class="pg__tip">
+                    <p>👍 Tip van Kevin</p>
+                    <p>
+                        De Socket.io instellingen worden bepaald in de Front- en Back-end. In de Front-end zijn deze
+                        instellingen te
+                        vinden in <i>/config/Socket.js</i>. In de <a class="pg__link"
+                            href="backend-strapi.html#socket-io">Back-end
+                            documentatie</a> is
+                        meer te vinden over Socket.io.
+                    </p>
+                </blockquote>
+                <h3>Componenten aanroepen</h3>
+                <p>
+                    In de pagina's van <i>eCommerce</i> en <i>Blog</i> worden de losse componenten aangeroepen. De
+                    bedoeling van deze componenten is dat er meerdere componenten met dezelfde functies komen voor
+                    bijvoorbeeld verschillende platformen. Om bijvoorbeeld een blog item te laten weergeven moet er data
+                    meegestuurd worden met het component. In het component komt de data binnen en hierna kan
+                    er besloten worden wat er mee gedaan kan worden.
+                </p>
+                <pre><xmp>// /pages/blog/Details.js
 return <SimpleBlogDetail blog={blog}/>
 
 // SimpleBlogDetail
 export const SimpleBlogDetail = ({blog}) => {
     console.log(blog);
 }</xmp></pre>
-            <div class="pg__buttons">
-                <a class="pg__button--redirect back" href="frontend-structuur.html">
-                    Ga terug naar Structuur.
-                </a>
-                <a class="pg__button--redirect forward" href="backend-strapi.html">
-                    Ga naar Over Strapi.
-                </a>
+                <div class="pg__buttons">
+                    <a class="pg__button--redirect back" href="frontend-structuur.html">
+                        Ga terug naar Structuur.
+                    </a>
+                    <a class="pg__button--redirect forward" href="backend-strapi.html">
+                        Ga naar Over Strapi.
+                    </a>
+                </div>
             </div>
-    </div>
-    </main>
-    <script src="assets/js/main.ob.js"></script>
+            <div class="pg__toc">
+                <div class="pg__toc--page">
+                    Componenten
+                </div>
+                <ul class="pg__toc--contents">
+                    <li class="pg__toc--contents-item">
+                        <a href="#frontend_componenten" class="pg__toc--link">Componenten</a>
+                    </li>
+                    <li class="pg__toc--contents-item">
+                        <a href="#functionele-componenten" class="pg__toc--link with-counter">
+                            Functionele componenten
+                        </a>
+                    </li>
+                    <li class="pg__toc--contents-item">
+                        <a href="#standaard_componenten" class="pg__toc--link with-counter">
+                            Standaard componenten
+                        </a>
+                    </li>
+                    <li class="pg__toc--contents-item">
+                        <a href="#systeem_variable_componenten" class="pg__toc--link with-counter">
+                            Systeem variabele componenten
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="pg__footer">
+            <div class="pg__footer--content">
+                <a href="/" class="pg__footer--logo">
+                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 422.46">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #F88F01;
+                                }
+                            </style>
+                        </defs>
+                        <path class="cls-1"
+                            d="M634.79,295.4c-5.91,13.62-12.72,30-20.22,48.64s-15.38,38.58-24.07,61.08l-9.9,25.36c-8.25,21.35-16.4,42-24.23,61.32-7.35,18.2-14,34.35-19.75,47.83-5.75-13.54-12.31-29.61-19.5-47.8q-11.62-29.19-24.49-61.36l-9.85-25.34c-7.64-19.79-15.52-39.77-24.08-61.09-7.73-19.11-14.54-35.48-20.26-48.64l-1.4-3.22H395.65l3.35,7.53c4.86,10.92,10.69,24.67,17.33,40.87h0q10.55,25.52,23,56,10.86,26.64,22.57,55.07L465.3,460q13.51,32.83,26,63.32c9.39,22.9,16.77,40.67,23.23,55.9,6.8,16,12.57,29.89,17.15,41.15l4.79,11.79,5.07-11.68C546.14,609.85,552,596,559,579.2q10.54-25.35,23-55.88T607.73,460q13.32-32.91,25.77-63.37c8-19.52,15.76-38.36,23.18-56l1.41-3.37q9.76-23.25,15.77-37.66l3.09-7.41H636.19Z"
+                            transform="translate(-164.94 -209.72)" />
+                        <path class="cls-1"
+                            d="M425.56,501.31v0q-10.55-25.5-23-56Q391.7,418.59,380,390.11l-3.38-8.23q-13.51-32.83-26-63.33c-9.33-22.74-16.71-40.5-23.23-55.89-6.81-16.06-12.58-29.9-17.15-41.15l-4.79-11.79-5.07,11.67c-4.6,10.59-10.47,24.49-17.43,41.3s-14.7,35.52-23,55.87S243.05,360,234.16,381.91s-17.47,43-25.77,63.36c-7.94,19.48-15.74,38.32-23.18,56q-10.74,25.58-17.18,41l-3.09,7.4H205.7l1.4-3.22c5.9-13.59,12.71-30,20.22-48.64s15.38-38.58,24.07-61.07l9.9-25.36c8.24-21.35,16.4-42,24.22-61.33,7.37-18.24,14-34.39,19.76-47.83,5.74,13.51,12.3,29.59,19.5,47.81q11.63,29.19,24.49,61.36l9.85,25.33c7.64,19.77,15.51,39.75,24.07,61.1,7.75,19.15,14.57,35.51,20.27,48.63l1.4,3.22h41.39l-3.35-7.52C438.05,531.31,432.22,517.56,425.56,501.31Z"
+                            transform="translate(-164.94 -209.72)" />
+                    </svg>
+                </a>
+                <div class="pg__footer--links">
+                    <a href="https://github.com/NSMNIA/SkeletonMaker" target="_blank" class="pg__footer--link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="pg__footer--copy">
+                    Gravity Media &copy;
+                </div>
+            </div>
+        </div>
+    </article>
+    <script src="/assets/js/main.ob.js"></script>
 </body>
 
 </html>
