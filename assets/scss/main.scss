@@ -181,6 +181,10 @@ ul{
                 line-height: 1.8;
                 &.active, &:hover{
                     background-color: var(--color-ui-hover-bg);
+                    .pg__navigation--icon{
+                        background-color: var(--color-primary);
+                        opacity: 1;
+                    }
                 }
 
                 &:hover{
@@ -199,9 +203,13 @@ ul{
                     margin: 2px 6px;
                     width: 23px;
                     height: 23px;
-                    background-color: var(--color-primary);
+                    background-color: var(--color-text-gray);
                     border-radius: .5rem;
                     color: var(--color-bg-default);
+                    opacity: .2;
+                    transition-property: opacity, background-color;
+                    transition-duration: .17s;
+                    transition-timing-function: ease-in;
                     svg{
                         width: 60%;
                     }
